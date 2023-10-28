@@ -137,7 +137,7 @@ h3 {
     margin: 1.5rem 1.6rem;
 }
 
-.proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCart {
+.proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     font-family: $font;
 }
 
@@ -215,7 +215,7 @@ h3 {
     padding-bottom: 2rem;
 }
 
-.addCart {
+.addCartBtn {
     display: flex;
     justify-content: center;
     color: white;
@@ -235,7 +235,7 @@ h3 {
 }
 
 .shadow {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100vw;
     height: 100%;
@@ -260,7 +260,7 @@ h3 {
     top: 5rem;
     margin: auto;
     width: 90%;
-    height: 17rem;
+    height: 15rem;
     background-color: white;
     border-radius: 10px;
     filter: drop-shadow(0 1rem 0.6rem hsla(0, 0%, 0%, 0.25));
@@ -273,18 +273,74 @@ h3 {
         border-bottom: 1px solid $grayBlue;
     }
 
-    div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 75%;
-    }
-
     h2 {
         font-family: $font;
         font-size: 16px;
         color: $darkGrayBlue;
     }
+}
+
+.itemWrap {
+    display: flex;
+    height: 60%;
+    flex-wrap: wrap;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    img:first-of-type {
+        height: 3rem;
+        border-radius: 5px;
+    }
+
+    img:last-of-type {
+        height: 1rem;
+        align-self: center;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h4 {
+        color: $darkGrayBlue;
+        font-family: $font;
+        font-weight: $normal;
+        font-size: 14px;
+        padding: 2px;
+
+
+        span:last-of-type {
+            color: black;
+            font-weight: $bold;
+        }
+    }
+
+}
+
+.hideItem {
+    display: none !important;
+}
+
+.checkout {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: $bold;
+    font-family: $font;
+    width: 100%;
+    background-color: $orange;
+    padding: 1.1rem;
+    border-radius: .7rem;
+    border: none;
 }
 
 .cartShow {
@@ -301,14 +357,14 @@ h3 {
 }
 
 .menu {
-    position: absolute;
+    position: fixed;
     width: 70%;
     height: 100%;
     top: 0;
     transition: left 0.5s ease;
     background-color: white;
 
-    .closeMenu {
+    .closeMenuIcon {
         margin: 1.5rem 0 1rem 1.3rem;
     }
 

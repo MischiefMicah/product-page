@@ -107,7 +107,7 @@ h3 {
   margin: 1.5rem 1.6rem;
 }
 
-.proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCart {
+.proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
   font-family: Kumbh Sans, sans-serif;
 }
 
@@ -193,7 +193,7 @@ h3 {
   padding-bottom: 2rem;
 }
 
-.addCart {
+.addCartBtn {
   display: flex;
   justify-content: center;
   color: white;
@@ -205,14 +205,14 @@ h3 {
   border: none;
   filter: drop-shadow(0 1rem 0.6rem hsla(26, 100%, 55%, 0.25));
 }
-.addCart img {
+.addCartBtn img {
   height: 1rem;
   margin: 0 1rem 0 0;
   filter: brightness(100);
 }
 
 .shadow {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100vw;
   height: 100%;
@@ -237,7 +237,7 @@ h3 {
   top: 5rem;
   margin: auto;
   width: 90%;
-  height: 17rem;
+  height: 15rem;
   background-color: white;
   border-radius: 10px;
   filter: drop-shadow(0 1rem 0.6rem hsla(0, 0%, 0%, 0.25));
@@ -249,16 +249,66 @@ h3 {
   padding: 1.3rem 0 1.3rem 1.3rem;
   border-bottom: 1px solid hsl(220, 14%, 75%);
 }
-.cartMenu div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 75%;
-}
 .cartMenu h2 {
   font-family: Kumbh Sans, sans-serif;
   font-size: 16px;
   color: hsl(219, 9%, 45%);
+}
+
+.itemWrap {
+  display: flex;
+  height: 60%;
+  flex-wrap: wrap;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.item img:first-of-type {
+  height: 3rem;
+  border-radius: 5px;
+}
+.item img:last-of-type {
+  height: 1rem;
+  align-self: center;
+}
+.item div {
+  display: flex;
+  flex-direction: column;
+}
+.item h4 {
+  color: hsl(219, 9%, 45%);
+  font-family: Kumbh Sans, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 2px;
+}
+.item h4 span:last-of-type {
+  color: black;
+  font-weight: 700;
+}
+
+.hideItem {
+  display: none !important;
+}
+
+.checkout {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-family: Kumbh Sans, sans-serif;
+  width: 100%;
+  background-color: hsl(26, 100%, 55%);
+  padding: 1.1rem;
+  border-radius: 0.7rem;
+  border: none;
 }
 
 .cartShow {
@@ -275,14 +325,14 @@ h3 {
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   width: 70%;
   height: 100%;
   top: 0;
   transition: left 0.5s ease;
   background-color: white;
 }
-.menu .closeMenu {
+.menu .closeMenuIcon {
   margin: 1.5rem 0 1rem 1.3rem;
 }
 .menu li {
