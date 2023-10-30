@@ -6,9 +6,12 @@
 @media screen and (min-width: 401px) {
   body {
     padding: 2rem 10rem;
+    max-width: 2400px;
+    min-width: 1200px;
   }
   nav {
     display: flex;
+    min-width: 1200px;
     height: 10rem;
     align-items: center;
     border-bottom: 2px solid hsl(220, 14%, 75%);
@@ -27,7 +30,7 @@
   .navLinks-desktop li {
     color: hsl(219, 9%, 45%);
     font-family: Kumbh Sans, sans-serif;
-    font-size: 28px;
+    font-size: 24px;
     margin: 0 2rem;
   }
   .menuIcon {
@@ -40,7 +43,7 @@
     position: relative;
   }
   .cartIconWrap img {
-    height: 2rem;
+    height: 1.5rem;
   }
   .cartIconWrap .cartQuant {
     width: 1.2rem;
@@ -61,7 +64,7 @@
     opacity: 0;
   }
   .userIcon img {
-    height: 5rem;
+    height: 4rem;
   }
 }
 @media screen and (max-width: 400px) {

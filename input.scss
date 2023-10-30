@@ -27,11 +27,14 @@ $mainMargin: 0 0 1rem 0;
     
     body {
         padding: 2rem 10rem;
+        max-width: 2400px;
+        min-width: 1200px;
 
     }
 
     nav {
         display: flex;
+        min-width: 1200px;
         height: 10rem;
         align-items: center;
         border-bottom: 2px solid $grayBlue;
@@ -53,7 +56,7 @@ $mainMargin: 0 0 1rem 0;
         li {
             color: $darkGrayBlue;
             font-family: $font;
-            font-size: 28px;
+            font-size: 24px;
             margin: 0 2rem;
         }
     }
@@ -70,7 +73,7 @@ $mainMargin: 0 0 1rem 0;
         position: relative;
 
         img {
-            height: 2rem;
+            height: 1.5rem;
         }
 
         .cartQuant {
@@ -96,7 +99,7 @@ $mainMargin: 0 0 1rem 0;
 
     .userIcon {
         img {
-            height: 5rem;
+            height: 4rem;
         }
     }
 }
