@@ -14,17 +14,25 @@
     <nav>
       <div class="menuIcon"><img src="images/icon-menu.svg" alt=""></div>
       <div class="logo"><img src="images/logo.svg" alt=""></div>
-      <div class="cartIcon"><img src="images/icon-cart.svg" alt=""></div>
+      <ul class="navLinks-desktop">
+        <li>Collections</li>
+        <li>Men</li>
+        <li>Women</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+      <div class="cartIcon">
+        <div class="cartIconWrap">
+          <img src="images/icon-cart.svg" alt="">
+          <div class="cartQuant cartQuantHide">0</div>
+        </div>
+      </div>
       <div class="userIcon"><img src="images/image-avatar.png" alt=""></div>
     </nav>
     <div class="slides">
-      <img src="images/image-product-1.jpg" alt="">
-      <button class="slidePrev"></button>
-      <button class="slideNext"></button>
-    </div>
-    <div class="cartMenu cartHide">
-      <h1>Cart</h1>
-      <h2></h2>
+      <img class="currSlide" id="0" src="images/image-product-1.jpg" alt="">
+      <button class="slidePrev slideBtn"></button>
+      <button class="slideNext slideBtn"></button>
     </div>
     <div class="mainWrap">
       <h3 class="brand">SNEAKER COMPANY</h3>
@@ -42,13 +50,28 @@
           <div class="quant">0</div>
           <button class="incBtn"></button>
         </div>
-        <button class="addCart"><img src="images/icon-cart.svg" alt="">Add to cart</button>
+        <button class="addCartBtn"><img src="images/icon-cart.svg" alt="">Add to cart</button>
       </div>
     </div>
   </div>
   <div class="shadow bright transition"></div>
+  <div class="cartMenu cartHide cartTransition">
+    <h1>Cart</h1>
+    <div class="itemWrap">
+      <h2>Your cart is empty.</h2>
+      <div class="item hideItem">
+        <img src="images/image-product-1-thumbnail.jpg" alt="">
+        <div>
+          <h4>Fall Limited Edition Sneakers</h4>
+          <h4>$125.00 x 0 <span>$0</span></h4>
+        </div>
+        <img src="images/icon-delete.svg" alt="">
+      </div>
+      <button class="checkout hideItem">Checkout</button>
+    </div>
+  </div>
   <div class="menu menuHidden">
-    <div class="closeMenu"><img src="images/icon-close.svg" alt=""></div>
+    <div class="closeMenuIcon"><img src="images/icon-close.svg" alt=""></div>
     <ul>
       <li>Collections</li>
       <li>Men</li>
