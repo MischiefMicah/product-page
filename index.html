@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+</head>
+<body>
+    <nav>
+      <div class="menuIcon"><img src="images/icon-menu.svg" alt=""></div>
+      <div class="logo"><img src="images/logo.svg" alt=""></div>
+      <div class="cartIcon"><img src="images/icon-cart.svg" alt=""></div>
+      <div class="userIcon"><img src="images/image-avatar.png" alt=""></div>
+    </nav>
+    <div class="slides">
+      <img src="images/image-product-1.jpg" alt="">
+      <button class="slidePrev"></button>
+      <button class="slideNext"></button>
+    </div>
+    <div class="cartMenu cartHide">
+      <h1>Cart</h1>
+      <h2></h2>
+    </div>
+    <div class="mainWrap">
+      <h3 class="brand">SNEAKER COMPANY</h3>
+      <h2 class="proName">Fall Limited Edition Sneakers</h2>
+      <p class="proDesc">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      <div class="prices">
+        <div class="currPrice">$125.00</div>
+        <div class="sale">50%</div>
+        <div class="origPrice">$250.00</div>
+      </div>
+      <div class="addWrap">
+        <div class="quantWrap">
+          <button class="decBtn"></button>
+          <div class="quant">0</div>
+          <button class="incBtn"></button>
+        </div>
+        <button class="addCart"><img src="images/icon-cart.svg" alt="">Add to cart</button>
+      </div>
+    </div>
+  </div>
+  <div class="shadow bright transition"></div>
+  <div class="menu menuHidden">
+    <div class="closeMenu"><img src="images/icon-close.svg" alt=""></div>
+    <ul>
+      <li>Collections</li>
+      <li>Men</li>
+      <li>Women</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="app.js"></script>
+</body>
+</html>

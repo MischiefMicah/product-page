@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: auto;
+  overflow: scroll;
+}
+
+body {
+  position: relative;
+}
+
+nav {
+  display: flex;
+  padding: 20px 20px;
+  align-items: center;
+}
+
+h3 {
+  font-family: Kumbh Sans, sans-serif;
+}
+
+.menuIcon {
+  flex: 5%;
+}
+.menuIcon img {
+  margin-top: 3px;
+  height: 18px;
+}
+
+.logo {
+  flex: 60%;
+}
+.logo img {
+  height: 20px;
+}
+
+.cartIcon {
+  flex: 8%;
+}
+.cartIcon img {
+  height: 20px;
+}
+
+.userIcon {
+  flex: 5%;
+}
+.userIcon img {
+  height: 25px;
+}
+
+.cartMenu {
+  position: absolute;
+  top: 6rem;
+  margin: auto;
+  width: 90%;
+  height: 18rem;
+  background-color: white;
+}
+
+.cartShow {
+  right: 0;
+  left: 0;
+}
+
+.cartHide {
+  left: -100vw;
+}
+
+.slides {
+  height: 23rem;
+  position: relative;
+}
+.slides img {
+  width: 100%;
+  height: 23rem;
+}
+.slides button {
+  position: absolute;
+  top: 50%;
+  width: 35px;
+  height: 35px;
+  border: none;
+  border-radius: 35px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25%;
+}
+
+.slidePrev {
+  background-image: url(images/icon-previous.svg);
+  left: 1.2rem;
+}
+
+.slideNext {
+  background-image: url(images/icon-next.svg);
+  right: 1.2rem;
+}
+
+.mainWrap {
+  margin: 1.5rem 1.6rem;
+}
+
+.proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCart {
+  font-family: Kumbh Sans, sans-serif;
+}
+
+.brand {
+  color: hsl(26, 100%, 55%);
+  font-size: 12px;
+  letter-spacing: 0.1rem;
+  margin: 0 0 1rem 0;
+}
+
+.proName {
+  margin: 0 0 1rem 0;
+}
+
+.proDesc {
+  color: hsl(219, 9%, 45%);
+  font-size: 16px;
+  line-height: 1.5rem;
+  margin: 0 0 1.5rem 0;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  margin: 0 0 1.5rem 0;
+}
+
+.currPrice {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.sale {
+  margin: 0 auto 0 5%;
+  width: 50px;
+  padding: 4px 0 4px 0;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 700;
+  color: hsl(26, 100%, 55%);
+  background-color: hsl(25, 100%, 94%);
+}
+
+.origPrice {
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(220, 14%, 75%);
+  text-decoration: line-through;
+}
+
+.quantWrap {
+  display: flex;
+  background-color: hsl(223, 64%, 98%);
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  margin: 0 0 1rem 0;
+}
+
+.decBtn {
+  background-image: url(images/icon-minus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: hsl(223, 64%, 98%);
+  border: none;
+  width: 20px;
+}
+
+.incBtn {
+  background-image: url(images/icon-plus.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: hsl(223, 64%, 98%);
+  border: none;
+  width: 20px;
+}
+
+.quant {
+  font-weight: 700;
+}
+
+.addWrap {
+  padding-bottom: 2rem;
+}
+
+.addCart {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  width: 100%;
+  background-color: hsl(26, 100%, 55%);
+  padding: 1.1rem;
+  border-radius: 0.7rem;
+  border: none;
+  filter: drop-shadow(0 1rem 0.6rem hsla(26, 100%, 55%, 0.25));
+}
+.addCart img {
+  height: 1rem;
+  margin: 0 1rem 0 0;
+  filter: brightness(100);
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  transition: background-color 0.5s ease;
+}
+
+.bright {
+  left: -100vw;
+}
+
+.transition {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.dark {
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.menu {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  top: 0;
+  transition: left 0.5s ease;
+  background-color: white;
+}
+.menu .closeMenu {
+  margin: 1.5rem 0 1rem 1.3rem;
+}
+.menu li {
+  font-family: Kumbh Sans, sans-serif;
+  font-weight: 700;
+  margin: 1.5rem 0 1rem 1.3rem;
+  list-style: none;
+}
+
+.openMenu {
+  left: 0;
+}
+
+.menuHidden {
+  left: -70vw;
+}
+
+/*# sourceMappingURL=styles.css.map */

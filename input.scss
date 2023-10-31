@@ -1,0 +1,280 @@
+$font: Kumbh Sans, sans-serif;
+$normal: 400;
+$bold: 700;
+$orange: hsl(26, 100%, 55%);
+$paleOrange: hsl(25, 100%, 94%);
+$darkBlue: hsl(220, 13%, 13%);
+$darkGrayBlue: hsl(219, 9%, 45%);
+$grayBlue: hsl(220, 14%, 75%);
+$lightGrayBlue: hsl(223, 64%, 98%);
+$lightBoxBlack: hsla(0, 0%, 0%, 0.75);
+$mainMargin: 0 0 1rem 0;
+
+@mixin quantBtnBack() {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $lightGrayBlue;
+    border: none;
+    width: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: auto;
+    overflow: scroll;
+}
+
+body {
+    position: relative;
+}
+
+
+nav {
+    display: flex;
+    padding: 20px 20px;
+    align-items: center;
+}
+
+h3 {
+    font-family: $font;
+}
+
+.menuIcon {
+    flex: 5%;
+
+    img {
+        margin-top: 3px;
+        height: 18px;
+    }
+}
+
+.logo {
+    flex: 60%;
+
+    img {
+        height: 20px;
+    }
+}
+
+
+.cartIcon {
+    flex: 8%;
+
+    img {
+        height: 20px;
+    }
+}
+
+.userIcon {
+    flex: 5%;
+
+    img {
+        height: 25px;
+    }
+}
+
+.cartMenu {
+    position: absolute;
+    top: 6rem;
+    margin: auto;
+    width: 90%;
+    height: 18rem;
+    background-color: white;
+}
+
+.cartShow {
+    right: 0;
+    left: 0;
+}
+
+.cartHide {
+    left: -100vw;
+}
+
+.slides {
+    height: 23rem;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 23rem;
+    }
+
+    button {
+        position: absolute;
+        top: 50%;
+        width: 35px;
+        height: 35px;
+        border: none;
+        border-radius: 35px;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 25%;
+    }
+}
+
+.slidePrev {
+    background-image: url(images/icon-previous.svg);
+    left: 1.2rem;
+}
+
+.slideNext {
+    background-image: url(images/icon-next.svg);
+    right: 1.2rem;
+}
+
+.mainWrap {
+    margin: 1.5rem 1.6rem;
+}
+
+.proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCart {
+    font-family: $font;
+}
+
+.brand {
+    color: $orange;
+    font-size: 12px;
+    letter-spacing: .1rem;
+    margin: $mainMargin;
+}
+
+.proName {
+    margin: $mainMargin;
+}
+
+.proDesc {
+    color: $darkGrayBlue;
+    font-size: 16px;
+    line-height: 1.5rem;
+    margin: 0 0 1.5rem 0;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    margin: 0 0 1.5rem 0;
+}
+
+.currPrice {
+    font-size: 22px;
+    font-weight: $bold;
+}
+
+.sale {
+    margin: 0 auto 0 5%;
+    width: 50px;
+    padding: 4px 0 4px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: $bold;
+    color: $orange;
+    background-color: $paleOrange;
+}
+
+.origPrice {
+    font-size: 16px;
+    font-weight: $bold;
+    color: $grayBlue;
+    text-decoration: line-through;
+}
+
+.quantWrap {
+    display: flex;
+    background-color: $lightGrayBlue;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: .7rem;
+    margin: $mainMargin;
+}
+
+.decBtn {
+    background-image: url(images/icon-minus.svg);
+    @include quantBtnBack();
+}
+
+.incBtn {
+    background-image: url(images/icon-plus.svg);
+    @include quantBtnBack();
+}
+
+.quant {
+    font-weight: $bold;
+}
+
+.addWrap {
+    padding-bottom: 2rem;
+}
+
+.addCart {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: $bold;
+    width: 100%;
+    background-color: $orange;
+    padding: 1.1rem;
+    border-radius: .7rem;
+    border: none;
+    filter: drop-shadow(0 1rem 0.6rem hsla(26, 100%, 55%, 0.25));
+
+    img {
+        height: 1rem;
+        margin: 0 1rem 0 0;
+        filter: brightness(100);
+    }
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    transition: background-color 0.5s ease;
+}
+
+.bright {
+    left: -100vw;
+}
+
+.transition {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.dark {
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.70)
+}
+
+.menu {
+    position: absolute;
+    width: 70%;
+    height: 100%;
+    top: 0;
+    transition: left 0.5s ease;
+    background-color: white;
+
+    .closeMenu {
+        margin: 1.5rem 0 1rem 1.3rem;
+    }
+
+    li {
+        font-family: $font;
+        font-weight: $bold;
+        margin: 1.5rem 0 1rem 1.3rem;
+        list-style: none;
+    }
+
+}
+
+.openMenu {
+    left: 0;
+}
+
+.menuHidden {
+    left: -70vw;
+}
