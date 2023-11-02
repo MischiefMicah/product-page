@@ -23,7 +23,11 @@ $mainMargin: 0 0 1rem 0;
     padding: 0;
 }
 
-@media screen and (min-width: 401px){
+h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
+    font-family: $font;
+}
+
+@media screen and (min-width: 1281px){
     
     body {
         padding: 2rem 10rem;
@@ -34,7 +38,7 @@ $mainMargin: 0 0 1rem 0;
 
     nav {
         display: flex;
-        min-width: 1200px;
+        min-width: 800px;
         height: 10rem;
         align-items: center;
         border-bottom: 2px solid $grayBlue;
@@ -102,6 +106,19 @@ $mainMargin: 0 0 1rem 0;
             height: 4rem;
         }
     }
+
+    .currSlide {
+        height: 30rem;
+        border-radius: 1rem;
+    }
+
+    .slideNext, .slidePrev {
+        display: none;
+    }
+
+    .menu {
+        display: none;
+    }
 }
 
 
@@ -123,10 +140,6 @@ $mainMargin: 0 0 1rem 0;
         display: flex;
         padding: 20px 20px;
         align-items: center;
-    }
-    
-    h3 {
-        font-family: $font;
     }
     
     .menuIcon {
@@ -226,10 +239,6 @@ $mainMargin: 0 0 1rem 0;
     
     .mainWrap {
         margin: 1.5rem 1.6rem;
-    }
-    
-    .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
-        font-family: $font;
     }
     
     .brand {
