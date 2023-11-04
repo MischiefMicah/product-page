@@ -7,7 +7,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
   font-family: Kumbh Sans, sans-serif;
 }
 
-@media screen and (min-width: 1240px) and (max-width: 1921px) {
+@media screen and (min-width: 1240px) {
   body {
     padding: 2rem 10rem;
   }
@@ -146,11 +146,69 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     color: hsl(220, 14%, 75%);
     text-decoration: line-through;
   }
+  .addWrap {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+  }
+  .quantWrap {
+    display: flex;
+    background-color: hsl(223, 64%, 98%);
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    border-radius: 0.7rem;
+    margin: 0 0 1rem 0;
+  }
+  .decBtn {
+    background-image: url(images/icon-minus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: hsl(223, 64%, 98%);
+    border: none;
+    width: 20px;
+    height: 20px;
+  }
+  .incBtn {
+    background-image: url(images/icon-plus.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: hsl(223, 64%, 98%);
+    border: none;
+    width: 20px;
+    height: 20px;
+  }
+  .quant {
+    font-weight: 700;
+  }
+  .addCartBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    width: 65%;
+    font-size: 20px;
+    background-color: hsl(26, 100%, 55%);
+    padding: 0.5rem 1rem;
+    border-radius: 0.7rem;
+    border: none;
+    filter: drop-shadow(0 1rem 0.6rem hsla(26, 100%, 55%, 0.25));
+  }
+  .addCartBtn img {
+    height: 1rem;
+    margin: 0 1rem 0 0;
+    filter: brightness(100);
+  }
   .menu {
     display: none;
   }
+  .cartMenu {
+    display: none;
+  }
 }
-@media screen and (min-width: 1240px) and (max-width: 1921px) and (max-width: 1500px) {
+@media screen and (min-width: 1240px) and (max-width: 1650px) {
   body {
     padding: 1rem 6rem;
   }
@@ -339,6 +397,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     background-color: hsl(223, 64%, 98%);
     border: none;
     width: 20px;
+    height: 20px;
   }
   .incBtn {
     background-image: url(images/icon-plus.svg);
@@ -347,6 +406,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     background-color: hsl(223, 64%, 98%);
     border: none;
     width: 20px;
+    height: 20px;
   }
   .quant {
     font-weight: 700;

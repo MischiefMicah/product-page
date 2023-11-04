@@ -16,6 +16,7 @@ $mainMargin: 0 0 1rem 0;
     background-color: $lightGrayBlue;
     border: none;
     width: 20px;
+    height: 20px;
 }
 
 * {
@@ -27,7 +28,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     font-family: $font;
 }
 
-@media screen and (min-width: 1240px) and (max-width: 1921px) {
+@media screen and (min-width: 1240px) {
 
     body {
         padding: 2rem 10rem;
@@ -197,11 +198,71 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
         text-decoration: line-through;
     }
 
+    .addWrap {
+        display: flex;
+        justify-content: space-between;
+        height: 4rem;
+    }
+
+    .quantWrap {
+        display: flex;
+        background-color: $lightGrayBlue;
+        justify-content: space-around;
+        align-items: center;
+        width: 30%;
+        height: 100%;
+        border-radius: .7rem;
+        margin: $mainMargin;
+    }
+    
+    .decBtn {
+        background-image: url(images/icon-minus.svg);
+        @include quantBtnBack();
+    }
+    
+    .incBtn {
+        background-image: url(images/icon-plus.svg);
+        @include quantBtnBack();
+    }
+    
+    .quant {
+        font-weight: $bold;
+    }
+
+    .addCartBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: $bold;
+        width: 65%;
+        font-size: 20px;
+        background-color: $orange;
+        padding: 0.5rem 1rem;
+        border-radius: .7rem;
+        border: none;
+        filter: drop-shadow(0 1rem 0.6rem hsla(26, 100%, 55%, 0.25));
+    
+        img {
+            height: 1rem;
+            margin: 0 1rem 0 0;
+            filter: brightness(100);
+        }
+    }
+
     .menu {
         display: none;
     }
 
-    @media screen and (max-width: 1500px) {
+    .cartMenu {
+        display: none;
+    }
+
+    @media screen and (min-width: 2000px) {
+
+    }
+
+    @media screen and (max-width: 1650px) {
         body {
             padding: 1rem 6rem;
         }
