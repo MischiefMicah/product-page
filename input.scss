@@ -42,7 +42,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     }
 
     .logo {
-        flex: 8%;
+        flex: 15%;
 
         img {
             height: 2rem;
@@ -53,12 +53,23 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
         flex: 75%;
         display: flex;
         list-style: none;
+        align-items: center;
+        height: 7.7rem;
 
         li {
             color: $darkGrayBlue;
             font-family: $font;
             font-size: 24px;
+            display: flex;
+            align-items: center;
+            height: 100%;
             margin: 0 2rem;
+            border-bottom: 5px solid rgba(255, 255, 255, 0);
+        }
+
+        li:hover {
+            border-bottom: 5px solid $orange;
+            cursor: pointer;
         }
     }
 
@@ -68,6 +79,18 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
 
     .cartIcon {
         margin: 0 5rem 0 0;
+        height: 2rem;
+        width: 2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .cartIcon:hover {
+        cursor: pointer;
+    }
+
+    .cartIcon:hover img {
+        filter: brightness(0%);
     }
     
     .cartIconWrap {
@@ -78,8 +101,8 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
         }
 
         .cartQuant {
-            width: 1.2rem;
-            height: 13px;
+            width: 1.3rem;
+            height: 15px;
             font-family: $font;
             font-weight: $bold;
             color: white;
@@ -88,8 +111,11 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
             border-radius: 12px;
             background-color: $orange;
             position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             top: -5px;
-            right: 0;
+            right: -5px;
             transition: opacity 0.2s ease-in;
         }
     }
@@ -101,6 +127,13 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     .userIcon {
         img {
             height: 4rem;
+            border: 3px solid white;
+            border-radius: 50%;
+        }
+
+        img:hover {
+            border: 3px solid $orange;
+            cursor: pointer;
         }
     }
 
@@ -130,6 +163,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
         width: 35rem;
 
         li {
+            border: 3px solid white;
             height: 7rem;
         }
 
@@ -140,11 +174,12 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
 
         img:hover {
             opacity: 40%;
+            cursor: pointer;
         }
     }
 
     .selectSlide {
-        border: 3px solid $orange;
+        border: 3px solid $orange !important;
         border-radius: 19px;
     }
 

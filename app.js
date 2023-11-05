@@ -119,7 +119,8 @@ const shoeApp = {
             shoeApp.slideSmBtns[i].children[0].classList.remove('selectSlideImg')
         }
         e.currentTarget.classList.add('selectSlide')
-        e.currentTarget.children[0].classList.add('selectSlide')
+        e.currentTarget.children[0].classList.add('selectSlideImg')
+        shoeApp.currSlide.src = `images/image-product-${e.currentTarget.id}.jpg`
     }
 }
 
