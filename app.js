@@ -121,6 +121,13 @@ const shoeApp = {
         e.currentTarget.classList.add('selectSlide')
         e.currentTarget.children[0].classList.add('selectSlideImg')
         shoeApp.currSlide.src = `images/image-product-${e.currentTarget.id}.jpg`
+    },
+    lbOpen: function(){
+        if(window.innerWidth > 450) {
+            shoeApp.shadow.classList.remove('bright')
+            shoeApp.shadow.classList.remove('shadTransition')
+            shoeApp.shadow.classList.add('dark')
+        }
     }
 }
 
@@ -145,3 +152,5 @@ shoeApp.slideBtns.forEach((btn) => {
 shoeApp.slideSmBtns.forEach((btn) => {
     btn.addEventListener('click', shoeApp.changeSlideDesktop)
 })
+
+shoeApp.currSlide.addEventListener('click', shoeApp.lbOpen)

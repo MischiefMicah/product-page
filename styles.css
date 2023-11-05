@@ -206,7 +206,8 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     width: 35rem;
   }
   .slideSm li {
-    border: 3px solid white;
+    border: 3px solid rgba(255, 255, 255, 0);
+    border-radius: 19px;
     height: 7rem;
   }
   .slideSm img {
@@ -219,10 +220,44 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
   }
   .selectSlide {
     border: 3px solid hsl(26, 100%, 55%) !important;
-    border-radius: 19px;
   }
   .selectSlideImg {
     opacity: 40%;
+  }
+  #lbSlides {
+    position: absolute;
+    width: 60rem;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    top: 8%;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  #lbSlides .currSlide {
+    height: 45rem;
+    width: 45rem;
+    margin: 0 auto 2rem auto;
+  }
+  #lbSlides .slideSm img:hover {
+    opacity: 70%;
+  }
+  #lbSlides .selectSlideImg {
+    opacity: 70%;
+  }
+  .lbClose {
+    display: flex;
+    justify-content: flex-end;
+    width: 45rem;
+    height: 4rem;
+  }
+  .lbClose img {
+    width: 2rem;
+    height: 2rem;
+    filter: brightness(0) invert(1);
   }
   .mainWrap {
     width: 50%;
@@ -323,6 +358,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: -1;
     color: white;
     font-weight: 700;
     width: 65%;
@@ -344,6 +380,23 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
   }
   .menu {
     display: none;
+  }
+  .shadow {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    z-index: 0;
+  }
+  .bright {
+    left: -1000vw;
+  }
+  .shadTransition {
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .dark {
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
   }
 }
 @media screen and (min-width: 451px) and (max-width: 1650px) {
@@ -691,6 +744,9 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
   }
   .menuHidden {
     left: -70vw;
+  }
+  #lbSlides {
+    display: none;
   }
 }
 
