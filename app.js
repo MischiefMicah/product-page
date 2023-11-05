@@ -19,6 +19,7 @@ const shoeApp = {
     item: $('.item'),
     slides: $('.slides'),
     slideBtns: document.querySelectorAll('.slideBtn'),
+    slideSmBtns: document.querySelectorAll('.slideSmBtn'),
     currSlide: $('.currSlide'),
     images: {
         full:[
@@ -90,7 +91,7 @@ const shoeApp = {
         shoeApp.cartQuant.classList.add('cartQuantHide')
         shoeApp.cartQuant.innerHTML = 0
     },
-    changeSlide: function(e) {
+    changeSlideMobile: function(e) {
         if (e.currentTarget.classList.contains('slideNext')) {
             if (parseInt(shoeApp.currSlide.id) >= 0 && parseInt(shoeApp.currSlide.id) < 3) {
                 let tempId = parseInt(shoeApp.currSlide.id)
@@ -111,6 +112,14 @@ const shoeApp = {
                 shoeApp.currSlide.src = shoeApp.images.full[`${shoeApp.currSlide.id}`]
             }
         }
+    },
+    changeSlideDesktop: function(e){
+        for (i=0;i < shoeApp.slideSmBtns.length; i++) {
+            shoeApp.slideSmBtns[i].classList.remove('selectSlide')
+            shoeApp.slideSmBtns[i].children[0].classList.remove('selectSlideImg')
+        }
+        e.currentTarget.classList.add('selectSlide')
+        e.currentTarget.children[0].classList.add('selectSlide')
     }
 }
 
@@ -129,5 +138,9 @@ shoeApp.addCartBtn.addEventListener('click', shoeApp.addItem)
 shoeApp.item.children[2].addEventListener('click', shoeApp.delItem)
 
 shoeApp.slideBtns.forEach((btn) => {
-    btn.addEventListener('click', shoeApp.changeSlide)
+    btn.addEventListener('click', shoeApp.changeSlideMobile)
+})
+
+shoeApp.slideSmBtns.forEach((btn) => {
+    btn.addEventListener('click', shoeApp.changeSlideDesktop)
 })

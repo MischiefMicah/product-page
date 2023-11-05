@@ -95,6 +95,16 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     height: 7rem;
     border-radius: 1rem;
   }
+  .slideSm img:hover {
+    opacity: 40%;
+  }
+  .selectSlide {
+    border: 3px solid hsl(26, 100%, 55%);
+    border-radius: 19px;
+  }
+  .selectSlideImg {
+    opacity: 40%;
+  }
   .mainWrap {
     width: 50%;
     margin: 5rem;
