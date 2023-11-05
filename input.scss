@@ -28,7 +28,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     font-family: $font;
 }
 
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 451px) {
 
     body {
         padding: 2rem 10rem;
@@ -122,6 +122,113 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
 
     .cartQuantHide {
         opacity: 0;
+    }
+
+    .cartMenu {
+        position: absolute;
+        top: 9rem; 
+        width: 23rem;
+        height: 15rem;
+        background-color: white;
+        border-radius: 10px;
+        filter: drop-shadow(0 1rem 0.6rem hsla(0, 0%, 0%, 0.25));
+        transition: opacity 0.5s ease;
+    
+        h1 {
+            font-family: $font;
+            font-size: 16px;
+            padding: 1.3rem 0 1.3rem 1.3rem;
+            border-bottom: 1px solid $grayBlue;
+        }
+    
+        h2 {
+            font-family: $font;
+            font-size: 16px;
+            color: $darkGrayBlue;
+        }
+    }
+    
+    .itemWrap {
+        display: flex;
+        height: 60%;
+        flex-wrap: wrap;
+        padding: 1rem 1.5rem 1rem 1.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .item {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    
+        img:first-of-type {
+            height: 3rem;
+            border-radius: 5px;
+        }
+    
+        img:last-of-type {
+            height: 1rem;
+            align-self: center;
+        }
+
+        img:last-of-type:hover {
+            cursor: pointer;
+            filter: brightness(0%);
+        }
+    
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        h4 {
+            color: $darkGrayBlue;
+            font-family: $font;
+            font-weight: $normal;
+            font-size: 16px;
+            padding: 2px;
+    
+    
+            span:last-of-type {
+                color: black;
+                font-weight: $bold;
+            }
+        }
+    
+    }
+
+    .cartShow {
+        right: 8%;
+    }
+    
+    .cartTransition {
+        opacity: 0;
+    }
+    
+    .cartHide {
+        left: -100vw;
+    }
+    
+    .hideItem {
+        display: none !important;
+    }
+
+    .checkout {
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-weight: $bold;
+        font-family: $font;
+        width: 100%;
+        background-color: $orange;
+        padding: 1.1rem;
+        border-radius: .7rem;
+        border: none;
+    }
+
+    .checkout:hover {
+        cursor: pointer;
     }
 
     .userIcon {
@@ -227,7 +334,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     
     .sale {
         margin: 0 auto 0 5%;
-        width: 3rem;
+        width: 4rem;
         padding: 4px 0 4px 0;
         border-radius: 5px;
         text-align: center;
@@ -267,10 +374,20 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
         background-image: url(images/icon-minus.svg);
         @include quantBtnBack();
     }
+
+    .decBtn:hover {
+        opacity: 60%;
+        cursor: pointer;
+    }
     
     .incBtn {
         background-image: url(images/icon-plus.svg);
         @include quantBtnBack();
+    }
+
+    .incBtn:hover {
+        opacity: 60%;
+        cursor: pointer;
     }
     
     .quant {
@@ -298,11 +415,12 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
         }
     }
 
-    .menu {
-        display: none;
+    .addCartBtn:hover {
+        opacity: 60%;
+        cursor: pointer;
     }
 
-    .cartMenu {
+    .menu {
         display: none;
     }
 
@@ -623,7 +741,6 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
         height: 60%;
         flex-wrap: wrap;
         padding: 1rem 1.5rem 1rem 1.5rem;
-        display: flex;
         justify-content: center;
         align-items: center;
     }

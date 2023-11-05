@@ -7,7 +7,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
   font-family: Kumbh Sans, sans-serif;
 }
 
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 451px) {
   body {
     padding: 2rem 10rem;
   }
@@ -86,6 +86,94 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
   }
   .cartQuantHide {
     opacity: 0;
+  }
+  .cartMenu {
+    position: absolute;
+    top: 9rem;
+    width: 23rem;
+    height: 15rem;
+    background-color: white;
+    border-radius: 10px;
+    filter: drop-shadow(0 1rem 0.6rem hsla(0, 0%, 0%, 0.25));
+    transition: opacity 0.5s ease;
+  }
+  .cartMenu h1 {
+    font-family: Kumbh Sans, sans-serif;
+    font-size: 16px;
+    padding: 1.3rem 0 1.3rem 1.3rem;
+    border-bottom: 1px solid hsl(220, 14%, 75%);
+  }
+  .cartMenu h2 {
+    font-family: Kumbh Sans, sans-serif;
+    font-size: 16px;
+    color: hsl(219, 9%, 45%);
+  }
+  .itemWrap {
+    display: flex;
+    height: 60%;
+    flex-wrap: wrap;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .item img:first-of-type {
+    height: 3rem;
+    border-radius: 5px;
+  }
+  .item img:last-of-type {
+    height: 1rem;
+    align-self: center;
+  }
+  .item img:last-of-type:hover {
+    cursor: pointer;
+    filter: brightness(0%);
+  }
+  .item div {
+    display: flex;
+    flex-direction: column;
+  }
+  .item h4 {
+    color: hsl(219, 9%, 45%);
+    font-family: Kumbh Sans, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 2px;
+  }
+  .item h4 span:last-of-type {
+    color: black;
+    font-weight: 700;
+  }
+  .cartShow {
+    right: 8%;
+  }
+  .cartTransition {
+    opacity: 0;
+  }
+  .cartHide {
+    left: -100vw;
+  }
+  .hideItem {
+    display: none !important;
+  }
+  .checkout {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-family: Kumbh Sans, sans-serif;
+    width: 100%;
+    background-color: hsl(26, 100%, 55%);
+    padding: 1.1rem;
+    border-radius: 0.7rem;
+    border: none;
+  }
+  .checkout:hover {
+    cursor: pointer;
   }
   .userIcon img {
     height: 4rem;
@@ -170,7 +258,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
   }
   .sale {
     margin: 0 auto 0 5%;
-    width: 3rem;
+    width: 4rem;
     padding: 4px 0 4px 0;
     border-radius: 5px;
     text-align: center;
@@ -211,6 +299,10 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     width: 20px;
     height: 20px;
   }
+  .decBtn:hover {
+    opacity: 60%;
+    cursor: pointer;
+  }
   .incBtn {
     background-image: url(images/icon-plus.svg);
     background-repeat: no-repeat;
@@ -219,6 +311,10 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     border: none;
     width: 20px;
     height: 20px;
+  }
+  .incBtn:hover {
+    opacity: 60%;
+    cursor: pointer;
   }
   .quant {
     font-weight: 700;
@@ -242,14 +338,15 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     margin: 0 1rem 0 0;
     filter: brightness(100);
   }
+  .addCartBtn:hover {
+    opacity: 60%;
+    cursor: pointer;
+  }
   .menu {
     display: none;
   }
-  .cartMenu {
-    display: none;
-  }
 }
-@media screen and (min-width: 1240px) and (max-width: 1650px) {
+@media screen and (min-width: 451px) and (max-width: 1650px) {
   body {
     padding: 1rem 6rem;
   }
@@ -516,7 +613,6 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     height: 60%;
     flex-wrap: wrap;
     padding: 1rem 1.5rem 1rem 1.5rem;
-    display: flex;
     justify-content: center;
     align-items: center;
   }
