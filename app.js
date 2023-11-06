@@ -23,6 +23,7 @@ const shoeApp = {
     lbSlides: document.querySelector('.lbSlides'),
     lbCurrSlide: document.querySelector('.lbCurrSlide'),
     lbSlideBtns: document.querySelectorAll('.lbSlideBtn'),
+    lbCloseBtn: document.querySelector('.lbCloseBtn').children[0],
     currSlide: $('.currSlide'),
     images: {
         full:[
@@ -57,16 +58,20 @@ const shoeApp = {
     },
     openCart: function() {
         if (shoeApp.cartMenu.classList.contains('cartShow')) {
-            shoeApp.cartMenu.classList.add('cartTransition')
-            setTimeout(()=> {
-                shoeApp.cartMenu.classList.remove('cartShow')
-                shoeApp.cartMenu.classList.add('cartHide')
-            }, 500)
+            shoeApp.closeCart()
         } else {
             shoeApp.cartMenu.classList.remove('cartHide')
             shoeApp.cartMenu.classList.remove('cartTransition')
             shoeApp.cartMenu.classList.add('cartShow')
-        }
+    }
+    },
+    closeCart: function() {
+        shoeApp.cartMenu.classList.add('cartTransition')
+        setTimeout(()=> {
+            shoeApp.cartMenu.classList.remove('cartShow')
+            shoeApp.cartMenu.classList.add('cartHide')
+        }, 500)
+
     },
     decQuant: function() {
         shoeApp.quant.innerHTML > 0 ? shoeApp.quant.innerHTML -= 1 : shoeApp.quant.innerHTML = 0
@@ -141,13 +146,23 @@ const shoeApp = {
             shoeApp.shadow.classList.remove('bright')
             shoeApp.shadow.classList.remove('shadTransition')
             shoeApp.shadow.classList.add('dark')
+            shoeApp.lbCurrSlide.src = shoeApp.images.full[0]
             shoeApp.lbSlideBtns[0].classList.add('selectSlide')
             shoeApp.lbSlideBtns[0].children[1].classList.add('selectSlideImg')
             shoeApp.lbSlides.classList.remove('lbHide')
+            shoeApp.closeCart()
         }
     },
     lbClose: function(){
         shoeApp.lbSlides.classList.add('lbHide')
+        shoeApp.shadow.classList.remove('dark')
+        shoeApp.shadow.classList.add('shadTransition')
+        shoeApp.shadow.classList.add('bright')
+        for (i=0;i < shoeApp.lbSlideBtns.length; i++) {
+            shoeApp.lbSlideBtns[i].classList.remove('selectSlide')
+            shoeApp.lbSlideBtns[i].children[1].classList.remove('selectSlideImg')
+        }
+
     }
 }
 
@@ -174,3 +189,4 @@ shoeApp.slideSmBtns.forEach((btn) => {
 })
 
 shoeApp.currSlide.addEventListener('click', shoeApp.lbOpen)
+shoeApp.lbCloseBtn.addEventListener('click', shoeApp.lbClose)

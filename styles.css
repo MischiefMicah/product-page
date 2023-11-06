@@ -460,22 +460,22 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
   }
   .lbSlides {
     top: 4%;
-    height: 50rem;
-    width: 37rem;
+    height: 45rem;
+    width: 33rem;
     right: 0;
     left: 0;
     margin: auto;
   }
   .lbSlides .currSlide {
-    height: 38rem;
-    width: 38rem;
+    height: 33rem;
+    width: 33rem;
   }
   .lbSlides li div {
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
   }
   .lbCloseBtn {
-    width: 38rem;
+    width: 33rem;
     height: 2rem;
     margin: 0 0 0.5rem 0;
   }
@@ -486,7 +486,13 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
   .mainWrap {
     width: 50%;
     margin: 3rem;
-    padding: 0 3rem 3rem 0;
+    padding: 1rem 3rem 3rem 0;
+  }
+  .brand {
+    font-size: 18px;
+  }
+  .proName {
+    font-size: 40px;
   }
 }
 @media screen and (max-width: 450px) {
