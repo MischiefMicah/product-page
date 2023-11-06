@@ -506,16 +506,29 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
             padding: 1rem 6rem;
         }
 
+        nav {
+            height: 5rem;
+        }
+
         .navLinks-desktop{
-            flex: 50%;
+            height: 4.7rem;
+            flex: 65%;
             display: flex;
             list-style: none;
     
             li {
                 color: $darkGrayBlue;
                 font-family: $font;
-                font-size: 20px;
+                font-size: 18px;
                 margin: 0 2rem;
+            }
+        }
+
+        .logo {
+            flex: 1%;
+
+            img {
+                height: 1.5rem;
             }
         }
 
@@ -527,25 +540,31 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
             top: 8rem;
         }
 
+        .userIcon {
+            img {
+                height: 3rem;
+            }
+        }
+
         .slides {
             width: 40%;
-            margin: 3rem;
+            margin: 3rem 0 0 7rem;
         }
     
         .currSlide {
-            height: 30rem;
+            height: 25rem;
             margin: 0 0 2rem 0;
         }
 
         .slideSm {
-            width: 30rem;
+            width: 25rem;
     
             li {
-                height: 6rem;
+                height: 5rem;
             }
     
             img {
-                height: 6rem;
+                height: 5rem;
                 border-radius: 1rem;
             }
         }
@@ -585,7 +604,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
         .mainWrap {
             width: 50%;
             margin: 3rem;
-            padding: 3rem 3rem 3rem 0;
+            padding: 0 3rem 3rem 0;
         }
     }
 }
