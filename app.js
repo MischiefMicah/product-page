@@ -20,6 +20,9 @@ const shoeApp = {
     slides: $('.slides'),
     slideBtns: document.querySelectorAll('.slideBtn'),
     slideSmBtns: document.querySelectorAll('.slideSmBtn'),
+    lbSlides: document.querySelector('.lbSlides'),
+    lbCurrSlide: document.querySelector('.lbCurrSlide'),
+    lbSlideBtns: document.querySelectorAll('.lbSlideBtn'),
     currSlide: $('.currSlide'),
     images: {
         full:[
@@ -43,6 +46,7 @@ const shoeApp = {
         shoeApp.shadow.classList.add('dark')
     },
     closeMenu: function() {
+        window.innerWidth > 450 ? shoeApp.lbClose() : undefined
         shoeApp.menu.classList.remove('openMenu')
         shoeApp.menu.classList.add('menuHidden')
         shoeApp.shadow.classList.remove('dark')
@@ -114,20 +118,36 @@ const shoeApp = {
         }
     },
     changeSlideDesktop: function(e){
-        for (i=0;i < shoeApp.slideSmBtns.length; i++) {
-            shoeApp.slideSmBtns[i].classList.remove('selectSlide')
-            shoeApp.slideSmBtns[i].children[0].classList.remove('selectSlideImg')
+        if (e.currentTarget.classList.contains('lbSlideBtn')) {
+            for (i=0;i < shoeApp.lbSlideBtns.length; i++) {
+                shoeApp.lbSlideBtns[i].classList.remove('selectSlide')
+                shoeApp.lbSlideBtns[i].children[1].classList.remove('selectSlideImg')
+            }
+            e.currentTarget.classList.add('selectSlide')
+            e.currentTarget.children[1].classList.add('selectSlideImg')
+            shoeApp.lbCurrSlide.src = `images/image-product-${e.currentTarget.id}.jpg`
+        } else {
+            for (i=0;i < shoeApp.slideSmBtns.length; i++) {
+                shoeApp.slideSmBtns[i].classList.remove('selectSlide')
+                shoeApp.slideSmBtns[i].children[0].classList.remove('selectSlideImg')
+            }
+            e.currentTarget.classList.add('selectSlide')
+            e.currentTarget.children[0].classList.add('selectSlideImg')
+            shoeApp.currSlide.src = `images/image-product-${e.currentTarget.id}.jpg`
         }
-        e.currentTarget.classList.add('selectSlide')
-        e.currentTarget.children[0].classList.add('selectSlideImg')
-        shoeApp.currSlide.src = `images/image-product-${e.currentTarget.id}.jpg`
     },
     lbOpen: function(){
         if(window.innerWidth > 450) {
             shoeApp.shadow.classList.remove('bright')
             shoeApp.shadow.classList.remove('shadTransition')
             shoeApp.shadow.classList.add('dark')
+            shoeApp.lbSlideBtns[0].classList.add('selectSlide')
+            shoeApp.lbSlideBtns[0].children[1].classList.add('selectSlideImg')
+            shoeApp.lbSlides.classList.remove('lbHide')
         }
+    },
+    lbClose: function(){
+        shoeApp.lbSlides.classList.add('lbHide')
     }
 }
 
