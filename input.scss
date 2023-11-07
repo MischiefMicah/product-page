@@ -339,6 +339,10 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
             height: 2rem;
             filter: brightness(0) invert(1);
         }
+
+        :hover {
+            filter: hue-rotate(150deg) brightness(150%) saturate(1000%);
+        }
     }
 
     .lbHide {
