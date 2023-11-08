@@ -502,7 +502,93 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     }
 
     @media screen and (min-width: 2000px) {
+        body {
+            width: 2000px;
+            margin: 0 auto;
+        }
 
+        nav {
+            height: 10rem;
+        }
+
+        .logo {
+            img {
+                height: 2.5rem;
+            }
+        }
+
+        .navLinks-desktop {
+            height: 9.7rem;
+
+            li {
+                font-size: 28px;
+            }
+        }
+
+        .cartIcon {
+            height: 3rem;
+            width: 3rem;
+        }
+
+        .cartIconWrap {
+            img {
+                height: 2.5rem;
+            }
+
+            .cartQuant {
+                width: 2rem;
+                height: 20px;
+                font-size: 14px;
+            }
+        }
+
+        .userIcon {
+            img {
+                height: 5rem;
+            }
+        }
+
+        .slides {
+            margin: 10rem 3rem 5rem 8rem;
+        }
+
+        .currSlide {
+            height: 45rem;
+        }
+
+        .slideSm {
+            width: 45rem;
+
+            li {
+                height: 9rem;
+            }
+
+            img {
+                height: 9rem;
+            }
+        }
+
+        .lbSlides {
+            width: 60rem;
+            height: 65rem;
+            margin: auto;
+            top: 12%;
+
+            .currSlide {
+                height: 55rem;
+                width: 55rem;
+            }
+        }
+
+        .lbCloseBtn {
+            width: 55rem;
+            margin: 0 0 1rem 0;
+
+            img {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
     }
 
     @media screen and (max-width: 1650px) {
@@ -574,7 +660,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
         }
 
         .lbSlides {
-            top: 4%;
+            top: 1rem;
             height: 45rem;
             width: 33rem;
             right: 0;
