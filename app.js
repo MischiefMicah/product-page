@@ -18,11 +18,12 @@ const shoeApp = {
     checkout: $('.checkout'),
     item: $('.item'),
     slides: $('.slides'),
-    slideBtns: document.querySelectorAll('.slideBtn'),
+    slideArrws: document.querySelectorAll('.slideArrw'),
     slideSmBtns: document.querySelectorAll('.slideSmBtn'),
     lbSlides: document.querySelector('.lbSlides'),
     lbCurrSlide: document.querySelector('.lbCurrSlide'),
     lbSlideBtns: document.querySelectorAll('.lbSlideBtn'),
+    lbSlideArrws: document.querySelectorAll('.lbSlideArrw'),
     lbCloseBtn: document.querySelector('.lbCloseBtn').children[0],
     currSlide: $('.currSlide'),
     images: {
@@ -162,7 +163,12 @@ const shoeApp = {
             shoeApp.lbSlideBtns[i].classList.remove('selectSlide')
             shoeApp.lbSlideBtns[i].children[1].classList.remove('selectSlideImg')
         }
-
+    },
+    lbArrwOver: function(e){
+        e.currentTarget.children[0].style.filter = 'hue-rotate(150deg) brightness(450%) saturate(1000%)'
+    },
+    lbArrwOut: function(e){
+        e.currentTarget.children[0].style.filter = ''
     }
 }
 
@@ -180,7 +186,7 @@ shoeApp.incBtn.addEventListener('click', shoeApp.incQuant)
 shoeApp.addCartBtn.addEventListener('click', shoeApp.addItem)
 shoeApp.item.children[2].addEventListener('click', shoeApp.delItem)
 
-shoeApp.slideBtns.forEach((btn) => {
+shoeApp.slideArrws.forEach((btn) => {
     btn.addEventListener('click', shoeApp.changeSlideMobile)
 })
 
@@ -190,3 +196,7 @@ shoeApp.slideSmBtns.forEach((btn) => {
 
 shoeApp.currSlide.addEventListener('click', shoeApp.lbOpen)
 shoeApp.lbCloseBtn.addEventListener('click', shoeApp.lbClose)
+shoeApp.lbSlideArrws.forEach((btn) => {
+    btn.addEventListener('mouseover', shoeApp.lbArrwOver)
+    btn.addEventListener('mouseout', shoeApp.lbArrwOut)
+})
