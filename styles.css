@@ -490,6 +490,20 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     height: 55rem;
     width: 55rem;
   }
+  .lbSlides .lbSlideArrw {
+    width: 5.5rem;
+    height: 5.5rem;
+  }
+  .lbSlides .slidePrev {
+    left: -0.5rem;
+  }
+  .lbSlides .slideNext {
+    right: -0.5rem;
+  }
+  .lbSlides li div {
+    width: 9rem;
+    height: 9rem;
+  }
   .lbCloseBtn {
     width: 55rem;
     margin: 0 0 1rem 0;
@@ -566,6 +580,15 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
   .lbSlides li div {
     width: 5rem;
     height: 5rem;
+  }
+  .lbSlides .lbSlideArrw {
+    width: 3rem;
+    height: 3rem;
+    top: 42%;
+  }
+  .lbSlides .lbSlideArrw img {
+    width: 0.8rem;
+    height: 1.2rem;
   }
   .lbCloseBtn {
     width: 33rem;

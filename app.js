@@ -101,8 +101,8 @@ const shoeApp = {
         shoeApp.cartQuant.classList.add('cartQuantHide')
         shoeApp.cartQuant.innerHTML = 0
     },
-    changeSlideMobile: function(e) {
-        if (e.currentTarget.classList.contains('slideNext')) {
+    arrowHandler: function(e) {
+        if (e.currentTarget.classList.contains('slideNext') && !e.currentTarget.classList.contains('lbSlideArrw')) {
             if (parseInt(shoeApp.currSlide.id) >= 0 && parseInt(shoeApp.currSlide.id) < 3) {
                 let tempId = parseInt(shoeApp.currSlide.id)
                 shoeApp.currSlide.id = tempId + 1
@@ -111,8 +111,7 @@ const shoeApp = {
                 shoeApp.currSlide.id = '0'
                 shoeApp.currSlide.src = shoeApp.images.full[`${shoeApp.currSlide.id}`]
             }
-        }
-        if (e.currentTarget.classList.contains('slidePrev')) {
+        } else if (e.currentTarget.classList.contains('slidePrev') && !e.currentTarget.classList.contains('lbSlideArrw')) {
             if (parseInt(shoeApp.currSlide.id) <= 3 && parseInt(shoeApp.currSlide.id) > 0) {
                 let tempId = parseInt(shoeApp.currSlide.id)
                 shoeApp.currSlide.id = tempId - 1
@@ -120,6 +119,24 @@ const shoeApp = {
             } else if (shoeApp.currSlide.id == '0') {
                 shoeApp.currSlide.id = '3'
                 shoeApp.currSlide.src = shoeApp.images.full[`${shoeApp.currSlide.id}`]
+            }
+        } else if (e.currentTarget.classList.contains('slideNext') && e.currentTarget.classList.contains('lbSlideArrw')) {
+            if (parseInt(shoeApp.lbCurrSlide.id) >= 0 && parseInt(shoeApp.lbCurrSlide.id) < 3) {
+                let tempId = parseInt(shoeApp.lbCurrSlide.id)
+                shoeApp.lbCurrSlide.id = tempId + 1
+                shoeApp.lbCurrSlide.src = shoeApp.images.full[`${shoeApp.lbCurrSlide.id}`]
+            } else if (shoeApp.lbCurrSlide.id == '3') {
+                shoeApp.lbCurrSlide.id = '0'
+                shoeApp.lbCurrSlide.src = shoeApp.images.full[`${shoeApp.lbCurrSlide.id}`]
+            }
+        } else if (e.currentTarget.classList.contains('slidePrev') && e.currentTarget.classList.contains('lbSlideArrw')) {
+            if (parseInt(shoeApp.lbCurrSlide.id) <= 3 && parseInt(shoeApp.lbCurrSlide.id) > 0) {
+                let tempId = parseInt(shoeApp.lbCurrSlide.id)
+                shoeApp.lbCurrSlide.id = tempId - 1
+                shoeApp.lbCurrSlide.src = shoeApp.images.full[`${shoeApp.lbCurrSlide.id}`]
+            } else if (shoeApp.lbCurrSlide.id == '0') {
+                shoeApp.lbCurrSlide.id = '3'
+                shoeApp.lbCurrSlide.src = shoeApp.images.full[`${shoeApp.lbCurrSlide.id}`]
             }
         }
     },
@@ -187,7 +204,7 @@ shoeApp.addCartBtn.addEventListener('click', shoeApp.addItem)
 shoeApp.item.children[2].addEventListener('click', shoeApp.delItem)
 
 shoeApp.slideArrws.forEach((btn) => {
-    btn.addEventListener('click', shoeApp.changeSlideMobile)
+    btn.addEventListener('click', shoeApp.arrowHandler)
 })
 
 shoeApp.slideSmBtns.forEach((btn) => {
