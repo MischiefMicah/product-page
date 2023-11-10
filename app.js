@@ -125,18 +125,42 @@ const shoeApp = {
                 let tempId = parseInt(shoeApp.lbCurrSlide.id)
                 shoeApp.lbCurrSlide.id = tempId + 1
                 shoeApp.lbCurrSlide.src = shoeApp.images.full[`${shoeApp.lbCurrSlide.id}`]
+                for (i=0;i < shoeApp.lbSlideBtns.length; i++) {
+                    shoeApp.lbSlideBtns[i].classList.remove('selectSlide')
+                    shoeApp.lbSlideBtns[i].children[1].classList.remove('selectSlideImg')
+                }
+                shoeApp.lbSlideBtns[parseInt(shoeApp.lbCurrSlide.id)].classList.add('selectSlide')
+                shoeApp.lbSlideBtns[parseInt(shoeApp.lbCurrSlide.id)].children[1].classList.add('selectSlideImg')
             } else if (shoeApp.lbCurrSlide.id == '3') {
                 shoeApp.lbCurrSlide.id = '0'
                 shoeApp.lbCurrSlide.src = shoeApp.images.full[`${shoeApp.lbCurrSlide.id}`]
+                for (i=0;i < shoeApp.lbSlideBtns.length; i++) {
+                    shoeApp.lbSlideBtns[i].classList.remove('selectSlide')
+                    shoeApp.lbSlideBtns[i].children[1].classList.remove('selectSlideImg')
+                }
+                shoeApp.lbSlideBtns[parseInt(shoeApp.lbCurrSlide.id)].classList.add('selectSlide')
+                shoeApp.lbSlideBtns[parseInt(shoeApp.lbCurrSlide.id)].children[1].classList.add('selectSlideImg')
             }
         } else if (e.currentTarget.classList.contains('slidePrev') && e.currentTarget.classList.contains('lbSlideArrw')) {
             if (parseInt(shoeApp.lbCurrSlide.id) <= 3 && parseInt(shoeApp.lbCurrSlide.id) > 0) {
                 let tempId = parseInt(shoeApp.lbCurrSlide.id)
                 shoeApp.lbCurrSlide.id = tempId - 1
                 shoeApp.lbCurrSlide.src = shoeApp.images.full[`${shoeApp.lbCurrSlide.id}`]
+                for (i=0;i < shoeApp.lbSlideBtns.length; i++) {
+                    shoeApp.lbSlideBtns[i].classList.remove('selectSlide')
+                    shoeApp.lbSlideBtns[i].children[1].classList.remove('selectSlideImg')
+                }
+                shoeApp.lbSlideBtns[parseInt(shoeApp.lbCurrSlide.id)].classList.add('selectSlide')
+                shoeApp.lbSlideBtns[parseInt(shoeApp.lbCurrSlide.id)].children[1].classList.add('selectSlideImg')
             } else if (shoeApp.lbCurrSlide.id == '0') {
                 shoeApp.lbCurrSlide.id = '3'
                 shoeApp.lbCurrSlide.src = shoeApp.images.full[`${shoeApp.lbCurrSlide.id}`]
+                for (i=0;i < shoeApp.lbSlideBtns.length; i++) {
+                    shoeApp.lbSlideBtns[i].classList.remove('selectSlide')
+                    shoeApp.lbSlideBtns[i].children[1].classList.remove('selectSlideImg')
+                }
+                shoeApp.lbSlideBtns[parseInt(shoeApp.lbCurrSlide.id)].classList.add('selectSlide')
+                shoeApp.lbSlideBtns[parseInt(shoeApp.lbCurrSlide.id)].children[1].classList.add('selectSlideImg')
             }
         }
     },
@@ -148,7 +172,8 @@ const shoeApp = {
             }
             e.currentTarget.classList.add('selectSlide')
             e.currentTarget.children[1].classList.add('selectSlideImg')
-            shoeApp.lbCurrSlide.src = `images/image-product-${e.currentTarget.id}.jpg`
+            shoeApp.lbCurrSlide.src = `images/image-product-${parseInt(e.currentTarget.id) + 1}.jpg`
+            shoeApp.lbCurrSlide.id = e.currentTarget.id
         } else {
             for (i=0;i < shoeApp.slideSmBtns.length; i++) {
                 shoeApp.slideSmBtns[i].classList.remove('selectSlide')
@@ -156,7 +181,8 @@ const shoeApp = {
             }
             e.currentTarget.classList.add('selectSlide')
             e.currentTarget.children[0].classList.add('selectSlideImg')
-            shoeApp.currSlide.src = `images/image-product-${e.currentTarget.id}.jpg`
+            shoeApp.currSlide.src = `images/image-product-${parseInt(e.currentTarget.id) + 1}.jpg`
+            shoeApp.currSlide.id = e.currentTarget.id
         }
     },
     lbOpen: function(){
@@ -167,6 +193,7 @@ const shoeApp = {
             shoeApp.lbCurrSlide.src = shoeApp.images.full[0]
             shoeApp.lbSlideBtns[0].classList.add('selectSlide')
             shoeApp.lbSlideBtns[0].children[1].classList.add('selectSlideImg')
+            shoeApp.lbCurrSlide.id = 0
             shoeApp.lbSlides.classList.remove('lbHide')
             shoeApp.closeCart()
         }
