@@ -7,7 +7,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
   font-family: Kumbh Sans, sans-serif;
 }
 
-@media screen and (min-width: 451px) {
+@media screen and (min-width: 1171px) {
   body {
     padding: 2rem 10rem;
   }
@@ -431,45 +431,50 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
   }
   .dark {
     left: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
   }
 }
-@media screen and (min-width: 451px) and (min-width: 2000px) {
+@media screen and (min-width: 1171px) and (min-width: 2000px) {
   body {
     width: 2000px;
     margin: 0 auto;
+    padding: 1rem 10rem 0 10rem;
   }
   nav {
-    height: 10rem;
+    height: 9rem;
+    padding: 0 0 1rem 0;
   }
   .logo img {
     height: 2.5rem;
   }
   .navLinks-desktop {
-    height: 9.7rem;
-  }
-  .navLinks-desktop li {
-    font-size: 28px;
+    height: 10.7rem;
   }
   .cartIcon {
     height: 3rem;
     width: 3rem;
   }
   .cartIconWrap img {
-    height: 2.5rem;
+    height: 2rem;
   }
   .cartIconWrap .cartQuant {
-    width: 2rem;
+    width: 1.8rem;
     height: 20px;
     font-size: 14px;
   }
   .userIcon img {
-    height: 5rem;
+    height: 4.5rem;
   }
   .cartMenu {
     top: 12rem;
     width: 30rem;
     height: 18rem;
+  }
+  .cartMenu h1 {
+    font-size: 20px;
+  }
+  .cartMenu h2 {
+    font-size: 20px;
   }
   .itemWrap {
     height: 65%;
@@ -494,25 +499,25 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     right: 10%;
   }
   .slides {
-    margin: 10rem 3rem 5rem 8rem;
+    margin: 7rem 3rem 7rem 10rem;
   }
   .currSlide {
-    height: 45rem;
+    height: 43rem;
   }
   .slideSm {
-    width: 45rem;
+    width: 43rem;
   }
   .slideSm li {
-    height: 9rem;
+    height: 8.3rem;
   }
   .slideSm img {
-    height: 9rem;
+    height: 8.3rem;
   }
   .lbSlides {
     width: 60rem;
     height: 65rem;
     margin: auto;
-    top: 12%;
+    top: 8%;
   }
   .lbSlides .currSlide {
     height: 55rem;
@@ -529,8 +534,8 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     right: -0.5rem;
   }
   .lbSlides li div {
-    width: 9rem;
-    height: 9rem;
+    width: 8.3rem;
+    height: 8.3rem;
   }
   .lbCloseBtn {
     width: 55rem;
@@ -541,24 +546,24 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     height: 2.5rem;
   }
   .mainWrap {
-    padding: 10rem 3rem 5rem 5rem;
+    padding: 5rem 10rem 5rem 5rem;
   }
   .brand {
     font-size: 24px;
     margin: 0 0 2rem 0;
   }
   .proName {
-    font-size: 64px;
+    font-size: 62px;
   }
   .proDesc {
-    font-size: 30px;
+    font-size: 26px;
     line-height: 3rem;
   }
   .prices {
-    margin: 4rem 0 4rem 0;
+    margin: 3rem 0 3rem 0;
   }
   .prices .currPrice {
-    font-size: 50px;
+    font-size: 48px;
   }
   .prices .sale {
     font-size: 30px;
@@ -570,26 +575,33 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     font-size: 30px;
   }
   .addWrap {
-    height: 5.5rem;
+    height: 5rem;
   }
   .quantWrap {
     width: 32%;
   }
   .quantWrap .decBtn {
-    width: 24px;
-    height: 28px;
+    width: 22px;
+    height: 26px;
     background-size: contain;
   }
   .quantWrap .quant {
-    font-size: 26px;
+    font-size: 22px;
   }
   .quantWrap .incBtn {
-    width: 24px;
-    height: 28px;
+    width: 22px;
+    height: 26px;
     background-size: contain;
   }
+  .addCartBtn {
+    font-size: 22px;
+  }
+  .addCartBtn img {
+    height: 1.3rem;
+    margin: 0 1.2rem 0 0;
+  }
 }
-@media screen and (min-width: 451px) and (max-width: 1650px) {
+@media screen and (min-width: 1171px) and (max-width: 1650px) {
   body {
     padding: 1rem 6rem;
   }
@@ -687,7 +699,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     font-size: 40px;
   }
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 1170px) {
   .navLinks-desktop {
     display: none;
   }

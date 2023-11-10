@@ -28,7 +28,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     font-family: $font;
 }
 
-@media screen and (min-width: 451px) {
+@media screen and (min-width: 1171px) {
 
     body {
         padding: 2rem 10rem;
@@ -527,17 +527,19 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
 
     .dark {
         left: 0;
-        background-color: rgba(0, 0, 0, 0.70)
+        background-color: rgba(0, 0, 0, 0.8)
     }
 
     @media screen and (min-width: 2000px) {
         body {
             width: 2000px;
             margin: 0 auto;
+            padding: 1rem 10rem 0 10rem;
         }
 
         nav {
-            height: 10rem;
+            height: 9rem;
+            padding: 0 0 1rem 0;
         }
 
         .logo {
@@ -547,11 +549,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
         }
 
         .navLinks-desktop {
-            height: 9.7rem;
-
-            li {
-                font-size: 28px;
-            }
+            height: 10.7rem;
         }
 
         .cartIcon {
@@ -561,11 +559,11 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
 
         .cartIconWrap {
             img {
-                height: 2.5rem;
+                height: 2rem;
             }
 
             .cartQuant {
-                width: 2rem;
+                width: 1.8rem;
                 height: 20px;
                 font-size: 14px;
             }
@@ -573,7 +571,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
 
         .userIcon {
             img {
-                height: 5rem;
+                height: 4.5rem;
             }
         }
 
@@ -581,6 +579,14 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
             top: 12rem;
             width: 30rem;
             height: 18rem;
+
+            h1 {
+                font-size: 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
         }
 
         .itemWrap{
@@ -615,22 +621,22 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
         }
 
         .slides {
-            margin: 10rem 3rem 5rem 8rem;
+            margin: 7rem 3rem 7rem 10rem;
         }
 
         .currSlide {
-            height: 45rem;
+            height: 43rem;
         }
 
         .slideSm {
-            width: 45rem;
+            width: 43rem;
 
             li {
-                height: 9rem;
+                height: 8.3rem;
             }
 
             img {
-                height: 9rem;
+                height: 8.3rem;
             }
         }
 
@@ -638,7 +644,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
             width: 60rem;
             height: 65rem;
             margin: auto;
-            top: 12%;
+            top: 8%;
 
             .currSlide {
                 height: 55rem;
@@ -660,8 +666,8 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
 
             li {
                 div {
-                    width: 9rem;
-                    height: 9rem;
+                    width: 8.3rem;
+                    height: 8.3rem;
                 }
             }
         }
@@ -677,7 +683,7 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
         }
 
         .mainWrap {
-            padding: 10rem 3rem 5rem 5rem;
+            padding: 5rem 10rem 5rem 5rem;
         }
 
         .brand {
@@ -686,19 +692,19 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
         }
 
         .proName {
-            font-size: 64px;
+            font-size: 62px;
         }
 
         .proDesc {
-            font-size: 30px;
+            font-size: 26px;
             line-height: 3rem;
         }
 
         .prices {
-            margin: 4rem 0 4rem 0;
+            margin: 3rem 0 3rem 0;
 
             .currPrice {
-                font-size: 50px;
+                font-size: 48px;
             }
 
             .sale {
@@ -714,26 +720,35 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
         }
 
         .addWrap {
-            height: 5.5rem;
+            height: 5rem;
         }
 
         .quantWrap {
             width: 32%;
 
             .decBtn {
-                width: 24px;
-                height: 28px;
+                width: 22px;
+                height: 26px;
                 background-size: contain;
             }
 
             .quant {
-                font-size: 26px;
+                font-size: 22px;
             }
 
             .incBtn {
-                width: 24px;
-                height: 28px;
+                width: 22px;
+                height: 26px;
                 background-size: contain;
+            }
+        }
+
+        .addCartBtn {
+            font-size: 22px;
+
+            img {
+                height: 1.3rem;
+                margin: 0 1.2rem 0 0;
             }
         }
     }
@@ -863,9 +878,10 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
           font-size: 40px;
         }
     }
+
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 1170px){
 
     .navLinks-desktop {
         display: none;
