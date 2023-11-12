@@ -46,6 +46,7 @@ const shoeApp = {
         shoeApp.shadow.classList.remove('bright')
         shoeApp.shadow.classList.remove('shadTransition')
         shoeApp.shadow.classList.add('dark')
+        shoeApp.closeCart()
     },
     closeMenu: function() {
         window.innerWidth > 450 ? shoeApp.lbClose() : undefined
@@ -186,7 +187,7 @@ const shoeApp = {
         }
     },
     lbOpen: function(){
-        if(window.innerWidth > 450) {
+        if(window.innerWidth > 1170) {
             shoeApp.shadow.classList.remove('bright')
             shoeApp.shadow.classList.remove('shadTransition')
             shoeApp.shadow.classList.add('dark')

@@ -1010,5 +1010,149 @@ h3, .proName, .proDesc, .currPrice, .sale, .origPrice, .quant, .addCartBtn {
     display: none;
   }
 }
+@media screen and (max-width: 1170px) and (min-width: 451px) {
+  nav {
+    height: 3rem;
+    border-bottom: 2px solid hsl(220, 14%, 75%);
+  }
+  .menuIcon {
+    margin: 0 0 0 1rem;
+    flex: 1%;
+  }
+  .menuIcon img {
+    height: 1.4rem;
+  }
+  .logo img {
+    height: 1.5rem;
+  }
+  .cartIcon {
+    flex: 0%;
+  }
+  .cartIconWrap img {
+    height: 1.7rem;
+  }
+  .cartIconWrap .cartQuant {
+    top: -3px;
+    right: -5px;
+  }
+  .userIcon {
+    flex: 1%;
+  }
+  .userIcon img {
+    height: 2.5rem;
+  }
+  .cartMenu {
+    width: 25rem;
+  }
+  .cartMenu h1 {
+    font-size: 20px;
+  }
+  .cartShow {
+    right: 2rem;
+    left: auto;
+  }
+  .itemWrap h2 {
+    font-size: 20px;
+  }
+  .item img:first-of-type {
+    height: 3.5rem;
+  }
+  .item h4 {
+    font-size: 18px;
+  }
+  .item img:last-of-type {
+    height: 1.2rem;
+  }
+  .desktopWrap {
+    width: 90%;
+    margin: auto;
+  }
+  .slides {
+    width: 40rem;
+    height: 40rem;
+    margin: 3rem auto 3rem auto;
+  }
+  .slides .currSlide {
+    width: 40rem;
+    height: 40rem;
+    border-radius: 1rem;
+  }
+  .slides button {
+    width: 3rem;
+    height: 3rem;
+  }
+  .mainWrap .brand {
+    font-size: 14px;
+  }
+  .mainWrap .proName {
+    font-size: 30px;
+  }
+  .mainWrap .proDesc {
+    font-size: 20px;
+    letter-spacing: 0.6px;
+    line-height: 2rem;
+  }
+  .prices {
+    flex-wrap: wrap;
+  }
+  .prices .currPrice {
+    font-size: 28px;
+    margin: 0 0 1rem 0;
+  }
+  .prices .sale {
+    font-size: 20px;
+    margin: 0 auto 1rem 2%;
+  }
+  .prices .origPrice {
+    font-size: 20px;
+    width: 100%;
+  }
+  .quantWrap {
+    padding: 1.5rem;
+  }
+  .quantWrap .quant {
+    font-size: 18px;
+  }
+  .quantWrap button {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-size: contain;
+  }
+  .addCartBtn {
+    padding: 1.5rem;
+    font-size: 20px;
+  }
+  .addCartBtn img {
+    height: 1.5rem;
+  }
+  .menu {
+    width: 50%;
+  }
+  .menu .closeMenuIcon {
+    margin: 1.5rem 0 1.5rem 1.6rem;
+  }
+  .menu .closeMenuIcon img {
+    width: 1.5rem;
+  }
+  .menu li {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1170px) and (min-width: 451px) and (max-width: 720px) {
+  .slides {
+    width: 25rem;
+    height: 25rem;
+    margin: 3rem auto 3rem auto;
+  }
+  .slides .currSlide {
+    width: 25rem;
+    height: 25rem;
+    border-radius: 1rem;
+  }
+  .slides button {
+    width: 3rem;
+    height: 3rem;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
