@@ -245,3 +245,9 @@ shoeApp.lbSlideArrws.forEach((btn) => {
     btn.addEventListener('mouseover', shoeApp.lbArrwOver)
     btn.addEventListener('mouseout', shoeApp.lbArrwOut)
 })
+
+window.addEventListener('resize', () => {
+    if (!shoeApp.lbSlides.classList.contains('lbHide') && window.innerWidth < 1171) {
+        shoeApp.lbClose()
+    }
+})
